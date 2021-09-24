@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "test-cuda"
+version = "0.1.0"
+description = ""
+authors = ["Julien Rossi <j.rossi@uva.nl>"]
+license = "GPL"
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+poethepoet = "^0.10.0"
+transformers = "^4.10.3"
+scikit-learn = "^0.24.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+torch190-cuda102 = "pip install torch torchaudio"
+torch190-cuda111 = "pip install torch==1.9.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html"
+torch171-cuda92  = "pip install torch==1.7.1+cu92 torchvision==0.8.2+cu92 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html"
+torch171-cuda101 = "pip install torch==1.7.1+cu101 torchvision==0.8.2+cu101 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html"
+torch171-cuda102 = "pip install torch==1.7.1 torchvision==0.8.2 torchaudio==0.7.2"
+torch171-cuda110 = "pip install torch==1.7.1+cu110 torchvision==0.8.2+cu110 torchaudio==0.7.2 -f https://download.pytorch.org/whl/torch_stable.html"

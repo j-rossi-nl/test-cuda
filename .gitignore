@@ -127,3 +127,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Pycharm Config
+.idea/
+
+# Generated content
+results/
+logs/
+aclImdb_v1.tar.gz
